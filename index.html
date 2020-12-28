@@ -1,79 +1,45 @@
 <!DOCTYPE html>
-<!-- saved from url=(0060)https://www.w3schools.com/w3css/tryw3css_templates_black.htm -->
-<html><script data-dapp-detection="">
-(function() {
-  let alreadyInsertedMetaTag = false
-
-  function __insertDappDetected() {
-    if (!alreadyInsertedMetaTag) {
-      const meta = document.createElement('meta')
-      meta.name = 'dapp-detected'
-      document.head.appendChild(meta)
-      alreadyInsertedMetaTag = true
-    }
-  }
-
-  if (window.hasOwnProperty('web3')) {
-    // Note a closure can't be used for this var because some sites like
-    // www.wnyc.org do a second script execution via eval for some reason.
-    window.__disableDappDetectionInsertion = true
-    // Likely oldWeb3 is undefined and it has a property only because
-    // we defined it. Some sites like wnyc.org are evaling all scripts
-    // that exist again, so this is protection against multiple calls.
-    if (window.web3 === undefined) {
-      return
-    }
-    __insertDappDetected()
-  } else {
-    var oldWeb3 = window.web3
-    Object.defineProperty(window, 'web3', {
-      configurable: true,
-      set: function (val) {
-        if (!window.__disableDappDetectionInsertion)
-          __insertDappDetected()
-        oldWeb3 = val
-      },
-      get: function () {
-        if (!window.__disableDappDetectionInsertion)
-          __insertDappDetected()
-        return oldWeb3
-      }
-    })
-  }
-})()</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Crown Inc.</title>
+<html lang="en">
+<title>Crown | HOME</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Crown Inc.</title>
       <link rel="icon" href="favicon.png" type="image/x-icon">
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="w3.css">
-<link rel="stylesheet" href="w3-theme-black.css">
-</head><body>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+<body>
 
-<!-- Side Navigation -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
-  <h4 class="w3-xxxlarge w3-text-theme">Navigation</h4>
-  <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
-  <a href="Crownjobs.html" class="w3-bar-item w3-button">Jobs</a>
-  <a href="#delivery" class="w3-bar-item w3-button">Delivery</a>
-  <a href="#emp" class="w3-bar-item w3-button">Employees</a>
-  <a href="#products" class="w3-bar-item w3-button">Products</a>
-  <a href="#cws" class="w3-bar-item w3-button">Crown Web Services</a>
-  <a href="crownmessage.html" class="w3-bar-item w3-button">Message</a>
-  <a href="search.html" class="w3-bar-item w3-button">Search</a>
-  
-</nav>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="https://noahti.github.io/crown" class="w3-bar-item w3-button w3-theme-l1">Crown</a>
+    <a href="https://noahti.github.io/crown/products" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Products</a>
+    <a href="https://noahti.github.io/crown/jobs" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Jobs</a>
+    <a href="https://noahti.github.io/crown/#cws" class="w3-bar-item w3-button w3-hide-small w3-hover-white">CWS</a>
+    <a href="https://noahti.github.io/crown/crownmessage.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Message</a>
+    <a href="https://noahti.github.io/crown/search.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Search</a>    
+      <button class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white" onclick="document.getElementById(&#39;id01&#39;).style.display=&#39;block&#39;">Order</button>
+      </div>
+</div>
 
-<!-- Header -->
-<header class="w3-container w3-theme w3-padding" id="myHeader">
-  <i onclick="w3_open()" class="w3-xlarge w3-button w3-theme">☰</i> 
-  <div class="w3-center">
-    <h4>Quality Forever</h4>
-  <h1 class="w3-xxxlarge w3-animate-bottom">Crown Inc.</h1>
-    <div class="w3-padding-32">
-      <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById(&#39;id01&#39;).style.display=&#39;block&#39;" style="font-weight:900;">Order</button>
-    </div>
-  </div>
-</header>
-<!-- Modal -->
+  <div class="w3-row w3-padding-64">
+    <div class="w3-container">
+    <center>
+      <h1 class="w3-text-teal">Crown, Inc.</h1>
+      </center>
+      
+      <center>
+      <!-- Modal -->
 <div id="id01" class="w3-modal">
     <div class="w3-modal-content w3-card-4 w3-animate-top">
       <header class="w3-container w3-theme-l1"> 
@@ -88,54 +54,10 @@
     </div>
 </div>
 
-<div class="w3-row-padding w3-center w3-margin-top">
-<div class="w3-third">
-  <div class="w3-card w3-container" style="min-height:200px">
-  <h3>Retail</h3><br>
-  <p>Laptops</p>
-  <p>Notebooks</p>
-  <p>Speed Cards & more</p>
-  </div>
-</div>
-
-<div class="w3-third">
-  <div class="w3-card w3-container" style="min-height:200px">
-  <h3>Web Services</h3><br>
-    <a href="search.html">Search</a>
-  <p>Site Launch</p>
-  <a href="crownmessage.html">Messages</a>
-  </div>
-</div>
-
-<div class="w3-third">
-  <div class="w3-card w3-container" style="min-height:200px">
-  <h3>Other Services</h3><br>
-    <p><a href="Crownjobs.html">Job Finder</a></p>
-    <p><a href="crownmessage.html">Messaging</a></p>
-  <p>Package Delivery</p>
-  </div>
-</div>
-</div>
-<div class="w3-container">
-<hr>
-
-
-
-
-
-
-
-
-<div class="w3-center">
-  <a name="cws"></a>
-  <h2>Crown Web Services</h2>
-  <a href="cws.html">Sign Up</a>
-  <p>Launch a website</p>
-</div>   
-
-<div class="w3-padding w3-white w3-display-container">
-  <span onclick="this.parentElement.style.display=&#39;none&#39;" class="w3-button w3-display-topright">X<i class="fa fa-remove"></i></span>
-<table>
+      <a name="cws">
+      <button class="accordion"><center>Crown CWS</center></button>
+<div class="panel">
+  <p><table>
 <tr>
 <th>Crown</th>
 <th>Starter</th>
@@ -227,127 +149,17 @@
 <td>15</td>
 <td>30</td>
 </tr>
-</table>
-
-</div>
-
-
-<hr>
-<div class="w3-center">
-  <a name="delivery"></a>
-  <h2>Delivery</h2>
-</div>
-</div>
-
-<div class="w3-row-padding">
-
-<div class="w3-half">
-<div class="w3-card white">
-  <div class="w3-container w3-indigo">
-    <h3>Normal</h3>
-  </div>
-  <div class="w3-container">
-    <h3 class="w3-text-theme">Refund</h3>
-    </div>
-    <ul class="w3-ul w3-border-top">
-      <li>
-        <h3>Time</h3>
-        <p>1 month.</p>
-      </li>
-      <li>
-        <h3>Charge</h3>
-        <p>4$</p>
-      </li>
-    </ul>
-</div>
-
-</div>
-
-<div class="w3-half">
-<div class="w3-card white">
-  <div class="w3-container w3-theme">
-    <h3>Premium</h3>
-  </div>
-  <div class="w3-container">
-  <h3 class="w3-text-theme">Refund</h3>
-  </div>
-  <ul class="w3-ul w3-border-top">
-    <li>
-      <h3>Time</h3>
-      <p>Max Time 2 weeks.</p>
-    </li>
-    <li>
-      <h3>Charge</h3>
-      <p>6$</p>
-    </li>
-  </ul>
-</div>
-</div>
-</div>
-<h6>Prices vary due to size.</h6>
-<div class="w3-container">
-  <hr>
-  <a name="emp"></a>
-  <div class="w3-center">
-    <h2>Employees</h2>
-  </div>
-<div class="w3-responsive w3-card-4">
-<table class="w3-table w3-striped w3-bordered">
-<thead>
-<tr class="w3-theme">
-  <th>First Name</th>
-  <th>Last Name</th>
-  <th>Town</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>Noah</td>
-  <td>Tillinghast</td>
-  <td>Tillinghastville</td>
-</tr>
-<tr class="w3-white">
-  <td>Jacob</td>
-  <td>Weaver</td>
-  <td>Weaverville</td>
-</tr>
-<tr>
-  <td>Elijah</td>
-  <td>Brackett</td>
-  <td>Little Medford</td>
-</tr>
-</tbody>
-</table>
-</div>
-
-
-<h2 class="w3-center">Products</h2>
-  <h3 class="w3-center">Coming Soon</h3>
-<div class="w3-content" style="max-width:800px;position:relative">
-
-<img class="mySlides w3-animate-opacity" src="laptop.jpg" style="width: 100%; display: block;">
-<img class="mySlides w3-animate-opacity" src="camera.jpg" style="width: 100%; display: none;">
-<img class="mySlides w3-animate-opacity" src="speedcard.jpg" style="width: 100%; display: none;">
-<img class="mySlides w3-animate-opacity" src="envelope.jpg" style="width: 100%; display: none;">
-  <img class="mySlides w3-animate-opacity" src="notebook.jpg" style="width: 100%; display: none;">
-<img class="mySlides w3-animate-opacity" src="desktop.jpg" style="width: 100%; display: none;">
-<img class="mySlides w3-animate-opacity" src="phone.jpg" style="width: 100%; display: none;">
-
-<a class="w3-button w3-hover-dark-grey" style="position:absolute;top:45%;left:0;" onclick="plusDivs(-1)">❮</a>
-<a class="w3-button w3-hover-dark-grey" style="position:absolute;top:45%;right:0;" onclick="plusDivs(+1)">❯</a>
+</table></p>
 </div>
 <hr>
-
-
 <a name="products"></a>
-<hr>
 <h2 class="w3-center">Products</h2>
 <div class="w3-border">
-<div class="w3-bar w3-theme">
-  <button class="w3-bar-item w3-button testbtn w3-padding-16 w3-dark-grey" onclick="openCity(event,&#39;Laptops&#39;)">Laptops</button>
+<div class="w3-bar">
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,&#39;Laptops&#39;)">Laptops</button>
   <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,&#39;Cameras&#39;)">Cameras</button>
   <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,&#39;SpeedCards&#39;)">Speed Cards</button>
-  <button class="w3-bar-item w3-button testbtn w3-padding-16 w3-dark-grey" onclick="openCity(event,&#39;Envelopes&#39;)">Envelopes</button>
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,&#39;Envelopes&#39;)">Envelopes</button>
   <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,&#39;Notebooks&#39;)">Notebooks</button>
   <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,&#39;Desktops&#39;)">Desktops</button>
   <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,&#39;Phones&#39;)">Phones</button>
@@ -391,33 +203,65 @@
   <p>Order the desktops for 20-25$. Since recent orders we have been a bit behind so products might take some time to produce.</p>
 </div>
 </div>
-
-
-
-<!-- Footer -->
-<footer class="w3-container w3-theme-light w3-padding-16">
-  <h3>Crown Inc. &#169; 2019-2020</h3>
-    <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
-    <span class="w3-text w3-theme-light w3-padding">Go To Top</span>&nbsp;   
-    <i class="fa fa-chevron-circle-up"></i></span></a>
+<hr>
+      </center>
+    </div>
   </div>
-</footer>
 
-<!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
+  <footer id="myFooter">
+
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://noahti.github.io/crown" target="_blank">CWS</a></p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+<!-- accordion code-->
 <script>
-// Side navigation
-function w3_open() {
-  var x = document.getElementById("mySidebar");
-  x.style.width = "20%";
-  x.style.fontSize = "12px";
-  x.style.paddingTop = "10%";
-  x.style.display = "block";
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
 }
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
+</script>
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
 }
 
-// Tabs
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+</style>
+<!-- accordion code-->
+<script>
+//tabs code
 function openCity(evt, cityName) {
   var i;
   var x = document.getElementsByClassName("city");
@@ -426,61 +270,19 @@ function openCity(evt, cityName) {
   }
   var activebtn = document.getElementsByClassName("testbtn");
   for (i = 0; i < x.length; i++) {
-    activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+    activebtn[i].className = activebtn[i].className.replace(" w3-white", "");
   }
   document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " w3-dark-grey";
+  evt.currentTarget.className += " w3-white";
 }
 
 var mybtn = document.getElementsByClassName("testbtn")[0];
 mybtn.click();
-
-// Accordions
-function myAccFunc(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-
-// Slideshows
-var slideIndex = 1;
-
-function plusDivs(n) {
-  slideIndex = slideIndex + n;
-  showDivs(slideIndex);
-}
-
-function showDivs(n) {
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-
-showDivs(1);
-
-// Progress Bars
-function move() {
-  var elem = document.getElementById("myBar");   
-  var width = 5;
-  var id = setInterval(frame, 10);
-  function frame() {
-    if (width == 100) {
-      clearInterval(id);
-    } else {
-      width++; 
-      elem.style.width = width + '%'; 
-      elem.innerHTML = width * 1  + '%';
-    }
-  }
-}
+</script>
+<script>
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
 </script>
 
-
-</body></html>
+</body>
+</html>
